@@ -1,0 +1,29 @@
+<image src="{{BackPic[Pagenum-1]}}" style="width: 750rpx; position: absolute; left: 0rpx; top: 0rpx" mode="widthFix"> </image>
+
+<view wx:if="{{ifPop == 1}}" style="position:absolute;z-index: 2;" class="FengMian">
+  <image src="{{imgUrls[Pagenum-1][num]}}" class="titimg" 
+	mode="aspectFit;" />
+   <box style="padding-top: 10rpx;">
+    <view class="item2">
+			<image src="cloud://yinhuaty-3g29vubsd10546f9.7969-yinhuaty-3g29vubsd10546f9-1319868389/？/play.png" style="width: 70rpx;" mode="widthFix" bindtap="MusicPlay" data-info="{{cnt}}"> </image>
+			<view> {{currentmin}} : {{currentsec}} / {{dura.minn}} : {{dura.sec}}  </view>
+			<slider block-size="12" min = "0" max = "{{dura.tot}}" value="{{currenttot}}" bindchange="changetot" > 
+			</slider>
+		</view>
+  </box>
+  <view class="back_item3" bindtap="changemusic" style="opacity: 0.8;">
+		<view class="item3" > 
+			<image src="cloud://yinhuaty-3g29vubsd10546f9.7969-yinhuaty-3g29vubsd10546f9-1319868389/？/refresh.png"> 
+			</image>
+			<view> 换一换 </view>
+		</view>
+	</view>
+	<view class="item4" style="opacity: 0.8;"> 
+		<view bindtap="changeIfpop"> 取消 </view>
+		<view bindtap="entrance"> 确定 </view>
+	</view>
+</view>
+
+<textarea value="{{keywords}}" bindinput="GetInput" placeholder="请输入关键词" style="position: absolute; left: 120rpx; top: 341rpx;box-sizing: border-box; opacity: 0.5; background-color: snow" 	placeholder-style="color:#000000; " maxlength="64" />
+
+<image src="{{fangdajing}}" class="fdj" style="position: absolute; left: 325rpx; top: 700rpx" bindtap="getpop"></image>

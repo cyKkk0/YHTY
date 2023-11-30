@@ -1,0 +1,29 @@
+<!--pages/navi/navi.wxml-->
+<view>
+		<swiper class = "swiper-container" indicator-dots indicator-color="white" indicator-active-color="gray" autoplay="true" interval="3000" circular>
+		<swiper-item wx:for="{{heng}}" wx:key="idx" style="width: 750rpx; display: block; left: 0rpx; top: 0rpx"> 
+			<image src="{{item}}" style="width: 750rpx; height: 320rpx; display:block; box-sizing: border-box"> </image>
+		</swiper-item>
+	</swiper>
+
+	<image src="cloud://yinhuaty-3g29vubsd10546f9.7969-yinhuaty-3g29vubsd10546f9-1319868389/？/横.jpg" style="width: 750rpx; display: block;" mode="widthFix" ></image>
+	<view> 
+		<image src="cloud://yinhuaty-3g29vubsd10546f9.7969-yinhuaty-3g29vubsd10546f9-1319868389/？/背景.png" class="backPic" style="width: 750rpx;"> </image>
+		<view class="word"> 
+			<view class="Group" > 
+				<image src="cloud://yinhuaty-3g29vubsd10546f9.7969-yinhuaty-3g29vubsd10546f9-1319868389/？/山水田园.png" mode="widthFix" bindtap="navito" data-info="TianYuanss" data-id="{{1}}" />
+				<image src="cloud://yinhuaty-3g29vubsd10546f9.7969-yinhuaty-3g29vubsd10546f9-1319868389/？/边塞征战.png" mode="widthFix" bindtap="navito" data-info="BianSaizz" data-id="{{2}}" />
+			</view>
+			<view class="Group"> 
+				<image src="cloud://yinhuaty-3g29vubsd10546f9.7969-yinhuaty-3g29vubsd10546f9-1319868389/？/羁旅思乡.png" mode="widthFix" bindtap="navito" data-info="JiLusx" data-id="{{3}}" />
+				<image src="cloud://yinhuaty-3g29vubsd10546f9.7969-yinhuaty-3g29vubsd10546f9-1319868389/？/忧国忧民.png" mode="widthFix" bindtap="navito" data-info="YouGuoym" data-id="{{4}}" />
+			</view>
+			<view class="Group"> 
+				<image src="cloud://yinhuaty-3g29vubsd10546f9.7969-yinhuaty-3g29vubsd10546f9-1319868389/？/花前月下.png" mode="widthFix" bindtap="navito" data-info="HuaQianyx" data-id="{{5}}" />
+				<image src="cloud://yinhuaty-3g29vubsd10546f9.7969-yinhuaty-3g29vubsd10546f9-1319868389/？/咏物言志.png" mode="widthFix" bindtap="navito" data-info="YongWuyz" data-id="{{6}}" />
+			</view>
+			
+		</view>
+	</view>
+</view>
+

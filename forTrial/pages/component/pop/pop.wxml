@@ -1,0 +1,52 @@
+<view wx:if="{{ifPop === 1}}" style="position:absolute;z-index: 2;" class="FengMian">
+  <image src="cloud://bzd-7gfc86yj7cb60054.627a-bzd-7gfc86yj7cb60054-1319868389/草稿/封面.png" class="titimg" 
+   />
+   <box style="padding-top: 10rpx;">
+    <view class="item2">
+			<image src="cloud://bzd-7gfc86yj7cb60054.627a-bzd-7gfc86yj7cb60054-1319868389/？/播放.png" style="width: 70rpx;" mode="widthFix" bindtap="MusicPlay" data-info="{{cnt}}"> </image>
+			<view> {{currentmin}} : {{currentsec}} / {{dura.minn}} : {{dura.sec}}  </view>
+			<slider block-size="12" min = "0" max = "{{dura.tot}}" value="{{currenttot}}" bindchange="changetot" > 
+			</slider>
+		</view>
+  </box>
+  <view class="back_item3">
+		<view class="item3" bindtap="MusicPlay" data-info="{{0}}"> 
+			<image src="cloud://bzd-7gfc86yj7cb60054.627a-bzd-7gfc86yj7cb60054-1319868389/草稿/逆向.png"> 
+			</image>
+			<view> 换一换 </view>		
+		</view>
+	</view>
+	<view class="item4"> 
+		<view bindtap="changeIfpop"> 取消 </view>
+		<view bindtap="navito"> 确定 </view>
+	</view>
+</view>
+
+<view>
+		<swiper class = "swiper-container" indicator-dots indicator-color="white" indicator-active-color="gray" autoplay="true" interval="3000" circular>
+		<swiper-item wx:for="{{heng}}" wx:key="idx"> 
+			<image src="{{item}}" mode="widthFix" style="width:750rpx;"> </image>
+		</swiper-item>
+		
+	</swiper>
+
+	<image src="cloud://bzd-7gfc86yj7cb60054.627a-bzd-7gfc86yj7cb60054-1319868389/？/横.jpg" style="width: 750rpx; display: block;" mode="widthFix" ></image>
+	<view> 
+		<image src="cloud://bzd-7gfc86yj7cb60054.627a-bzd-7gfc86yj7cb60054-1319868389/？/背景.png" class="backPic" style="width: 750rpx;"> </image>
+		<view class="word"> 
+			<view class="Group" > 
+				<image src="cloud://bzd-7gfc86yj7cb60054.627a-bzd-7gfc86yj7cb60054-1319868389/？/山水田园.png" mode="widthFix" bindtap="navito" data-info="TianYuanss" data-id="{{1}}" />
+				<image src="cloud://bzd-7gfc86yj7cb60054.627a-bzd-7gfc86yj7cb60054-1319868389/？/边塞征战.png" mode="widthFix" bindtap="navito" data-info="BianSaizz" data-id="{{2}}" />
+			</view>
+			<view class="Group"> 
+				<image src="cloud://bzd-7gfc86yj7cb60054.627a-bzd-7gfc86yj7cb60054-1319868389/？/羁旅思乡.png" mode="widthFix" bindtap="navito" data-info="JiLusx" data-id="{{3}}" />
+				<image src="cloud://bzd-7gfc86yj7cb60054.627a-bzd-7gfc86yj7cb60054-1319868389/？/忧国忧民.png" mode="widthFix" bindtap="navito" data-info="YouGuoym" data-id="{{4}}" />
+			</view>
+			<view class="Group"> 
+				<image src="cloud://bzd-7gfc86yj7cb60054.627a-bzd-7gfc86yj7cb60054-1319868389/？/花前月下.png" mode="widthFix" bindtap="navito" data-info="HuaQianyx" data-id="{{5}}" />
+				<image src="cloud://bzd-7gfc86yj7cb60054.627a-bzd-7gfc86yj7cb60054-1319868389/？/咏物言志.png" mode="widthFix" bindtap="navito" data-info="YongWuyz" data-id="{{6}}" />
+			</view>
+			
+		</view>
+	</view>
+</view>

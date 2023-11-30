@@ -1,0 +1,148 @@
+/* pages/navi/navi.wxss */
+page{
+  height: 100%;
+}
+.HengImg{
+	height: 15%;
+	width: 750rpx;
+}
+.swiper-container{
+  width: 750rpx;
+  height:320rpx;
+}
+
+.backPic{
+  height: 85%;
+  position: absolute;
+	z-index: -1;
+}
+
+.word{
+  height: 75%;
+	position:absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	z-index: 0;
+}
+.Group{
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: larger;
+  
+}
+.Group image{
+  width:270rpx;
+}
+.item_view{
+  margin-top: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.FengMian {
+  width: 750rpx;
+  padding-top: 150rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.FengMian .Background{
+  width: 650rpx;
+  background-color: rosybrown;
+  border-radius: 50rpx;
+}
+.FengMian .Background .item1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.FengMian .Background .item2{
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #e8e8e8;
+  border-radius: 50rpx;
+  /* padding-top: 10rpx; */
+
+}
+.FengMian .Background .item2 view{
+  font-size: 35rpx;
+  color: #848484;
+}
+.FengMian .Background .item2 slider{
+  width: 250rpx;
+  /* background-color: #c4c4c4; */
+}
+.FengMian .Background .back_item3
+{
+  width: 650rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10rpx;
+  /* padding-left: 15rpx; */
+}
+.FengMian .Background .back_item3 .item3{
+  width: 250rpx;
+  padding-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rpx;
+  background-color: #c3b7a7;
+}
+.FengMian .Background .back_item3 .item3 image{
+  width: 70rpx;
+  height: 70rpx;
+}
+.FengMian .Background .back_item3 .item3 view{
+  height: 70rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 40rpx;
+  padding-left: 20rpx;
+  padding-right: 30rpx;
+}
+.FengMian .Background .item4{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 10rpx;
+}
+.FengMian .Background .item4 view{
+  width: 130rpx;
+  height: 70rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  background-color: #c3b7a7;
+  border-radius: 50rpx;
+}
+.img-class{
+  width: 100px;
+  height: 100px;
+  z-index: -1;
+  position: fixed;
+}
+
+.text_num{
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  background: rgb(99, 99, 105);
+  opacity: 0.5;
+  font-size: 14px;
+  color: rgb(248, 248, 244);
+  z-index: 100;
+  position: fixed;
+}

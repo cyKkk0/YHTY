@@ -1,0 +1,36 @@
+/* pages/login/login.wxss *//* pages/login/login.wxss */
+page{
+	background-color: #c3b7a7;
+}
+
+.top{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.logo{
+	width: 300rpx;
+	height: 300rpx;
+	margin: 50rpx;
+}
+
+.item{
+ 	display:flex;	
+ 	background:white;	
+ 	align-items: center;	
+	padding: 25rpx 20rpx;
+	margin-top: 40rpx;
+}
+
+.btn{
+	color:black;
+	margin: 40rpx 100rpx;
+}
+
+.zhuce{
+	color: white;
+	text-align: center;
+}

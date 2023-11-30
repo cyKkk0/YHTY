@@ -1,0 +1,133 @@
+/* pages/pop/pop.wxss *//* pages/navi/navi.wxss */
+page{
+  height: 100%;
+}
+.HengImg{
+	height: 15%;
+	width: 750rpx;
+}
+
+.backPic{
+  height: 85%;
+  position: absolute;
+	z-index: -1;
+}
+
+.word{
+  height: 75%;
+	position:absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	z-index: 0;
+}
+.Group{
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: larger;
+  
+}
+.Group image{
+  width:270rpx;
+}
+.item_view{
+  margin-top: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.FengMian {
+  width: 750rpx;
+  height: 100%;
+  padding-top: 150rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background: rgba(250,250,250,0.6); */
+	backdrop-filter: blur(10px);
+}
+/* 弹窗的背景设置*/
+.FengMian .titimg{
+  overflow: hidden;
+  width: 550rpx;
+  height: 750rpx;
+  border-radius: 50rpx;
+}
+/* 大头图的设置 */
+.FengMian .item2{
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #e8e8e8;
+  border-radius: 50rpx;
+  /* padding-top: 10rpx; */
+}
+/* 播放器样式 */
+.FengMian .item2 view{
+  font-size: 35rpx;
+  color: #848484;
+}
+/* 播放器显示字体 */
+.FengMian .item2 slider{
+  width: 250rpx;
+  /* background-color: #c4c4c4; */
+}
+/* 滑动条样式 */
+.FengMian .back_item3
+{
+  width: 650rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10rpx;
+  /* padding-left: 15rpx; */
+}
+/* 换一换 背景 */
+.FengMian .back_item3 .item3{
+  width: 250rpx;
+  padding-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rpx;
+  background-color: #c3b7a7;
+}
+/* 换一换 */
+.FengMian .back_item3 .item3 image{
+  width: 70rpx;
+  height: 70rpx;
+}
+.FengMian .back_item3 .item3 view{
+  height: 70rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 40rpx;
+  padding-left: 20rpx;
+  padding-right: 30rpx;
+}
+.FengMian .item4{
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 10rpx;
+}
+/* 取消确定框架 */
+.FengMian .item4 view{
+  width: 130rpx;
+  height: 70rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  background-color: #c3b7a7;
+  border-radius: 50rpx;
+}

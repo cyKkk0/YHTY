@@ -1,0 +1,17 @@
+<view class="top">
+	<image class="logo" src="" mode=""/>
+	<view>音画同源</view>
+</view>
+
+<view class="item">
+ 	<view>手机号:</view>	
+ 	<input placeholder="请输入您的手机号"  bindinput="getPhone"/>	
+ </view>
+ <view class="item">
+ 	<view>密码:</view>	
+ 	<input placeholder="请输入您的密码" bindinput="getPsw"/>	
+ 	</view>
+
+	 <button class="btn" bindtap="login">登陆</button>
+
+	 <view class="zhuce" bindtap="register">暂无账号？点击去注册</view>

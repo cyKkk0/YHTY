@@ -1,0 +1,6 @@
+<view wx:for="{{poems}}" wx:key="id">
+	<view class="listt">
+		<view class="title">{{item['title']}}</view>
+		<text class="text"> {{item['text']}}</text>
+	</view>
+</view>

@@ -1,0 +1,27 @@
+.listt{
+	border: 1rpx solid black;
+}
+.listt .title{
+	display: flex;
+	
+	font-size: 45rpx;
+	height:60rpx;
+}
+.listt .text{
+	padding-top: 10rpx;
+	display: block;
+	font-size:28rpx;
+	color:#000000;
+	line-height: 40rpx;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+/* .listt .text{
+	display: flex;
+	height:auto;
+	font-size: 30rpx;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}	 */
