@@ -1,20 +1,11 @@
-// pages/me/me.js
+// pages/User/User.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    user:{
-      
 
-    }
-  },
-  onShow:function(){
-    let user=wx.setStorageSync('user')
-    this.setData({
-      user:user
-    })
   },
 
   /**
@@ -36,20 +27,6 @@ Page({
    */
   onShow() {
 
-  },
-
-  login(){
-    wx.navigateTo({
-      url: '/pages/login/login',
-    })
-  },
-
-  loginOUT(){
-    this.setData({
-      user:{
-        
-      }
-    })
   },
 
   /**

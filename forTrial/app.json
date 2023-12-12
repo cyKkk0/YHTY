@@ -1,44 +1,41 @@
 {
-  "pages": [
+  "pages":[
     "pages/navi/navi",
     "pages/User/User",
     "pages/index/index",
     "pages/logs/logs",
     "pages/fav/fav",
-    "pages/ChildOfNavi/GeneralPage/GeneralPage",
-    "pages/component/pop/pop",
-    "pages/ChildOfNavi/show/show",
-    "pages/register/register",
-		"pages/login/login",
-		"pages/poems/poems"
+    "pages/ChildOfNavi/GeneralPage/GeneralPage"
   ],
-  "window": {
-    "backgroundTextStyle": "light",
+  "window":{
+    "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle":"black"
   },
   "tabBar": {
-    "list": [
-      {
-        "pagePath": "pages/navi/navi",
+    "list":[
+			{
+				"pagePath": "pages/navi/navi",
         "text": "首页",
-        "iconPath": "/pages/ima/首页.jpg",
-        "selectedIconPath": "/pages/ima/首页.jpg"
-      },
+        "iconPath": "/pages/ima/首页.jpeg",
+        "selectedIconPath": "/pages/ima/首页.jpeg"
+			},
+
       {
-        "pagePath": "pages/poems/poems",
-        "text": "总览",
-        "iconPath": "/pages/ima/收藏.jpg",
-        "selectedIconPath": "/pages/ima/收藏.jpg"       
-      },
-      {
+        "pagePath": "pages/fav/fav",
+        "text": "收藏",
+        "iconPath": "/pages/ima/收藏1.jpeg",
+        "selectedIconPath": "/pages/ima/收藏2.jpg"
+      },	
+    	{
         "pagePath": "pages/User/User",
         "text": "我的",
-        "iconPath": "/pages/ima/收藏.jpg",
-        "selectedIconPath": "/pages/ima/收藏.jpg"
+        "iconPath": "/pages/ima/用户.jpg",
+        "selectedIconPath": "/pages/ima/用户.jpg"
       }
-    ]
+		]
+
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

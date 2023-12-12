@@ -9,15 +9,17 @@ Page({
    */
   data: {
     heng:[
-      "cloud://yinhuaty-3g29vubsd10546f9.7969-yinhuaty-3g29vubsd10546f9-1319868389/？/横1.jpg",
-      "cloud://yinhuaty-3g29vubsd10546f9.7969-yinhuaty-3g29vubsd10546f9-1319868389/？/横2.jpg",
-      "cloud://yinhuaty-3g29vubsd10546f9.7969-yinhuaty-3g29vubsd10546f9-1319868389/？/横3.jpg",
-      "cloud://yinhuaty-3g29vubsd10546f9.7969-yinhuaty-3g29vubsd10546f9-1319868389/？/横4.jpg"
+      "cloud://cloud1-1g4i847ibeee4260.636c-cloud1-1g4i847ibeee4260-1320121817/轮播图1.jpg",
+      "cloud://cloud1-1g4i847ibeee4260.636c-cloud1-1g4i847ibeee4260-1320121817/轮播图2.jpg",
+      "cloud://cloud1-1g4i847ibeee4260.636c-cloud1-1g4i847ibeee4260-1320121817/轮播图3.jpg",
+      "cloud://cloud1-1g4i847ibeee4260.636c-cloud1-1g4i847ibeee4260-1320121817/轮播图5.jpg"
     ],
+    ifPop: 0,
+    Opacii: 1,
     Music:[
       {
         name:"成名在望",
-        src:"cloud://yinhuaty-3g29vubsd10546f9.7969-yinhuaty-3g29vubsd10546f9-1319868389/？/music/五月天 - 成名在望 (Life Live).mp3",
+        src:"cloud://cloud1-1g4i847ibeee4260.636c-cloud1-1g4i847ibeee4260-1320121817/Dripice - Escape.mp3",
       },
     ],
     dura:{
@@ -31,6 +33,76 @@ Page({
     currenttot: 0,
     cnt: 0
   },
+  changeIfpop: function(e){
+    this.setData({
+      ifPop: 0,
+      Opacii: 1,
+    })
+    backgroundAudioManager.stop()
+    console.log(this.data.ifPop)
+  },
+  ChangeSlide: function(e){
+    var tot = backgroundAudioManager.currentTime
+    console.log("Changeslide：",tot)
+    console.log(tot)
+    this.setData({
+      currenttime: parseInt(tot),
+      currenttot: parseInt(tot),
+      currentsec: Math.floor(tot / 60),
+      currentsec: Math.floor(tot % 60),
+    })
+  },
+  changetot: function(e){
+    var tot = e.detail.value
+    console.log("Changetot:",tot)
+    this.setData({
+      currenttime: tot,
+      currenttot: tot,
+      currentsec: Math.floor(tot % 60),
+      currentmin: Math.floor(tot / 60)
+    })
+    backgroundAudioManager.seek(tot)
+  },
+  MusicPlay:function(e){
+    var cc = e.target.dataset.info
+    console.log(cc%2)
+    if(cc % 2 == 0)
+    {
+      var num = 0;
+      backgroundAudioManager.title = this.data.Music[num].name
+      backgroundAudioManager.src = this.data.Music[num].src      
+      if(cc == 0)
+      {
+        // console.log(backgroundAudioManager.src)
+        var dura = backgroundAudioManager.duration
+        console.log(dura)
+        var tot = parseInt(dura)
+        var min = parseInt(dura / 60)
+        var sec = parseInt(dura) - 60 * min 
+        if(min < 10) min = "0" + min
+        if(sec < 10) sec = "0" + sec
+        this.setData({
+        'dura.minn': min,
+        'dura.sec': sec,
+        'dura.tot': tot
+       })        
+      console.log(this.data.dura)
+      }
+      console.log("开始")
+      // console.log(backgroundAudioManager.src)
+      backgroundAudioManager.seek(this.data.currenttot)
+    }
+    else{
+      console.log("暂停")
+      backgroundAudioManager.stop()
+    }
+    this.setData({
+      cnt: cc + 1
+    })
+  },
+  MusicPause: function(e){
+    backgroundAudioManager.pause()
+  },
   navito:function(e){
     var app = getApp()
     app.globalData.currentpage = e.target.dataset.id
@@ -43,19 +115,43 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    this.setData({
+      ifPop: 1
+    })
+    backgroundAudioManager.title = this.data.Music[0].name
+    backgroundAudioManager.src = this.data.Music[0].src
+    backgroundAudioManager.onTimeUpdate((res) => {
+      var tot = backgroundAudioManager.currentTime
+      var min = Math.floor(tot / 60)
+      var sec = Math.floor(tot % 60)
+      if(min < 10) min = "0" + min
+      if(sec < 10) sec = "0" + sec
+      this.setData({
+        currenttot: tot,
+        currentmin: min,
+        currentsec: sec
+      })
+    })
+    // innerAudioContext.title = this.data.Music[0].name
+    // innerAudioContext.src= this.data.Music[0].src
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-
+    backgroundAudioManager.stop()
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    this.setData({
+      Opacii: this.data.ifPop ? 0.5 : 1
+    })
+    console.log(this.data.Opacii)
+    backgroundAudioManager.stop()
   },
 
   /**

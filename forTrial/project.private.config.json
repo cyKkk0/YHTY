@@ -13,34 +13,6 @@
           "query": "",
           "launchMode": "default",
           "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/component/pop/pop",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/ChildOfNavi/山水田园/山水田园",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/ChildOfNavi/ssty/ssty",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "",
-          "pathName": "pages/component/pop/pop",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
         }
       ]
     }
